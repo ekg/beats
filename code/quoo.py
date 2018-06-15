@@ -5,7 +5,7 @@ b5 >> play(P["  * "], spin=var([1,2,7],1), sample=4)
 b6 >> play(P["  o "], spin=var([1,2,0],1), sample=4)
 b2 >> play(P["  O "], spin=var([1,8,0],0.7), sample=2)
 b3 >> play(P[" -"].bubble(), sample=1)
-b4 >> play(P[" -"].shuffle(), dur=PDur(7,8), sample=3)
+b4 >> play(P[" -"].stretch(16).shuffle(), dur=PDur(7,8), sample=3)
 p1 >> blip(P[0,P*[2,2,7],4,rest(1)]-16, amplify=var([1,0,1,0],[7,1,2])*5, dur=var([PDur(3,8),PDur(3,6)],[7,1]), echo=var([0,1.75],3))
 
 p2 >> star([(0,2,4)]+P[:4]+8, dur=var([PDur(3,16)*2,PDur(7,8)*2],[7,1]), amp=var([1,0,1,0],[4,1,3,1])*0.7, room=10, lpf=linvar([800,1200],32))
