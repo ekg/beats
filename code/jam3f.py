@@ -8,3 +8,5 @@ d3 >> play(mantra, dur=1/2, pan=var([-1,1],2.5), sample=var(P[:6],len(mantra)))
 
 
 pp >> pads([(0,2,4)]|P/[4,1,5]+PEuclid(5,len(mantra))*P[:len(mantra)].shuffle(), room=0.5, dur=4, amp=0.5, lpf=400)
+
+Clock.clear()
