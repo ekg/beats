@@ -1,3 +1,4 @@
+Clock.bpm=109
 b0 >> play("x- (= (@))(-o)")
 b1 >> play(" xx(-) (%#*evag)")
 p1 >> play("r rp( am)")
@@ -15,8 +16,8 @@ Scale.default ="minor"
 Scale.default="minorPentatonic"
 
 n1 >> pads(P[-12,-13,-14,-15].stutter(6), amp=0.4, delay=0.5)
-u1 >> piano(P(0,2,4)+P[0,0,5,3], echo=0.75,decay=6,amp=PDur(5,16))
-k2 >> play("X(-m)o(h-)",8sample=4)
+u1 >> keys(P(0,2,4)+P[0,0,5,3], echo=0.75,decay=6,amp=PDur(5,16))
+k2 >> play("X(-m)o(h-)",sample=4)
 c0 >> space(P[0:9] + P[6],amp=PEuclid(1,8),sus=4)
 gg >> charm()
 pp >> snick(P[2])
