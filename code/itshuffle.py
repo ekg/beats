@@ -20,9 +20,9 @@ Scale.root = var([4,4,4,2,2,4,5],16)
 
 Clock.nudge = var([0,0.1,0,0.05,0,0.1,-0.05,0.1],1/3)
 ii >> play('X--[--]V -',dur=PDur(5,16))
-
+ii.stop()
 ga.stop()
-
+Clock.clear()
 ga >> play(P['X--[///////--]',rest(4)])
 
 
@@ -36,7 +36,7 @@ d1 >> dbass(P[0,7,6,5.5,4,3.5,3,-0.5,
               0,7,3.5,3,2,1,0,-1
     ],tremolo=0,dur=P[3],sample=0)
 
-theme_durs = P[2,2,1,2,4,1,1/2,1/2,1,1,1]
+theme_durs = P[2,2,1,2,4,1,1/2,1/2,1,1/2,1/2,1]
 son_accent = []
 N_hits = len(son_durs)
 p2 >> play(P["p"].stretch(N_hits),dur=son_durs,sample=4,pan=(1,-1),amp=son_accent)
@@ -46,7 +46,7 @@ Root.default =0
 Scale.default = 'minor'
 
 d1 >> bass(P[0,0,-1,0,2,0,3,2,0,-1,0,0,0,-1,0,3,0,3,2,0,-1,0,],tremolo=0,dur=theme_durs).spread()
-
+Clock.clear()
 
 no >> play('nikete licks [cum]',dur=PDur(5,16),amp=var([0,1,0]))
 no >> play('(erik) sucks (dicks) (yum)',dur=PDur(5,16))
