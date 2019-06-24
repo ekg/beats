@@ -6,8 +6,7 @@ clave_son =     (1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0)
 print(PEuclid(3,8)|PEuclid(2,5).rotate(-2)|[0,0,0])
 print(son_clave)
 
-def b2(rhythm, s1,s2):
-    return ''.join([s1 if r ==0 else s2 for r in rhythm])
+def b2(rhythm, s1,s2): return ''.join([s1 if r ==0 else s2 for r in rhythm])
 
 d1 >> play(P['V']*PEuclid(5,16))
 p2 >> play(P[b2(son_clave," ",'p')],pan=(1,-1))
